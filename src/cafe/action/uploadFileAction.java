@@ -22,7 +22,7 @@ public class uploadFileAction extends ActionSupport{
 
 	public String execute(){
 		String result=ERROR;
-		destPath = "C:"+File.separator+"pleiades"+File.separator+"workspace"+File.separator+"cafe"+File.separator+"WebContent"+File.separator+"image";
+		destPath = "C:"+File.separator+"pleiades"+File.separator+"workspace"+File.separator+"prototype"+File.separator+"WebContent"+File.separator+"image";
 
 		try{
 			String myFileFileName=myFileName;

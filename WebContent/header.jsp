@@ -11,34 +11,27 @@
 <meta charset=UTF-8>
 <title>header</title>
 <body id="header">
-		<s:if test="#session.name==null">
-			<input type="submit" value="新規登録" class="header-btn modal-login-open">
-			<br>
-			<br>
-			<br>
-			<br>
-		</s:if>
-		<s:else>
-				<s:property value="#session.name" />
+	<s:if test="#session.name==null">
+		<input type="submit" value="新規登録" class="header-btn modal-login-open">
+	</s:if>
+	<s:else>
+		<s:property value="#session.name" />
 				でログインしています
 			<table>
-				<tr>
-					<td><s:form action="GoMyPageAction">
-							<input type="submit" value="マイページ" class="header-btn">
-						</s:form></td>
-					<td><s:form action="GoLogoutAction">
-							<input type="submit" value="ログアウト" class="header-btn">
-						</s:form></td>
-				</tr>
-			</table>
-			<s:form action="SearchResultAction">
-				<input type="text" name="summary">
-				<input type="submit" value="キーワード検索">
-			</s:form>
-		</s:else>
-	<br>
-	<br>
-	<br>
+			<tr>
+				<td><s:form action="GoMyPageAction">
+						<input type="submit" value="マイページ" class="header-btn">
+					</s:form></td>
+				<td><s:form action="GoLogoutAction">
+						<input type="submit" value="ログアウト" class="header-btn">
+					</s:form></td>
+			</tr>
+		</table>
+		<s:form action="SearchResultAction">
+			<input type="text" name="summary">
+			<input type="submit" value="キーワード検索">
+		</s:form>
+	</s:else>
 	<div class="modal-main">
 		新規登録を行います。<br>
 		<s:form action="GoLoginAction">

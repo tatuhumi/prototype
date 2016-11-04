@@ -8,7 +8,7 @@
 <title>マイページ</title>
 </head>
 <body>
-<footer id="header"><jsp:include page="header.jsp" /></footer>
+
 <h4>
 <s:property value = "#session.name"/>
 さんの投稿一覧</h4>

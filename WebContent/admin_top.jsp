@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="css/admin_top.css">
 </head>
 <body>
-<footer id="header"><jsp:include page="header.jsp" /></footer>
+
 	<br>
 	<br>
 	<br>

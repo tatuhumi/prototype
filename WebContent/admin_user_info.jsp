@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
  <body>
-<footer id="header"><jsp:include page="header.jsp" /></footer>
+r>
 
 <form>
 	<input type="button" value="戻る" onclick="history.back()">

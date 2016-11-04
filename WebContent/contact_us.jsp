@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="css/contact_us.css">
 </head>
 <body>
-<footer id="header"><jsp:include page="header.jsp" /></footer>
+
 	<br>
 	<br>
 	<br>

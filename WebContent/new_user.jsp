@@ -9,7 +9,7 @@
 <title>SignUp</title>
 </head>
 <body>
-	<footer id="header"><jsp:include page="header.jsp" /></footer>
+
 	<table>
 		<tr>
 			<td>Name</td>
