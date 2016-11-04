@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.devMode" value="true" />
+	<package name="cafe.action" extends="struts-default">
+
+		<!-- お問い合わせ画面への遷移 -->
+		<action name="ContactAction" class="cafe.action.ContactUsAction"
+			method="execute">
+			<result name="success">/contact_us.jsp</result>
+		</action>
+		<!-- 管理人のユーザー管理ページへの遷移 -->
+		<action name="GoAdminUserInfo" class="cafe.action.SuccessAction"
+			method="execute">
+			<result name="success">/admin_user_info.jsp</result>
+		</action>
+		<!-- 管理人のお問い合わせ画面への遷移 -->
+		<action name="GoAdminUserContactUs" class="cafe.action.AdminUserContactUsAction"
+			method="execute">
+			<result name="success">/admin_user_contact_us.jsp</result>
+		</action>
+		<!-- 管理人のお問い合わせ画面での削除 -->
+		<action name="ContactUsDelete" class="cafe.action.AdminUserContactUsDeleteAction"
+			method="execute">
+			<result name="success" type="chain">GoAdminUserContactUs</result>
+		</action>
+		<!-- 管理人お問い合わせ画面での案件保護機能 -->
+		<action name="ContactPrimarityAction" class="cafe.action.AdminUserContactUsPrimarityAction"
+			method="execute">
+			<result name="success" type="chain">GoAdminUserContactUs</result>
+		</action>
+
+		<!--フッターのお問い合わせボタンを押下し、お問い合わせ画面に遷移するアクション -->
+		<action name="GoContactUsAction" class="cafe.action.SuccessAction"
+			method="execute">
+			<result name="success">/contact_us.jsp</result>
+		</action>
+		<!--フッターの管理者ボタンを押下し、管理者画面に遷移するアクション -->
+		<action name="GoAdminTopAction" class="cafe.action.SuccessAction"
+			method="execute">
+			<result name="success">/admin_top.jsp</result>
+		</action>
+		<!-- メイン画面でファイルのアップロード機能 -->
+		<action name="FileStreamAction" class="cafe.action.uploadFileAction"
+			method="execute">
+			<result name="success" >my_page.jsp</result>
+		</action>
+		<!-- インデックス画面からメイン画面への画面遷移 -->
+		<action name="MainAction" class="cafe.action.SelectMainAction"
+			method="execute">
+			<result name="success">main.jsp</result>
+		</action>
+
+<action name="ContactUsUpdate" class="cafe.action.AdminUserContactUsEditAction"
+			method="execute">
+			<result name="success" type="chain">GoAdminUserContactUs</result>
+		</action>
+
+		<action name="GoAdminArticle" class="cafe.action.SuccessAction"
+			method="execute">
+			<result name="success">/admin_article.jsp</result>
+		</action>
+
+	</package>
+</struts>
