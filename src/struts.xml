@@ -43,6 +43,11 @@
 			method="execute">
 			<result name="success">/admin_top.jsp</result>
 		</action>
+
+		<action name="GoAboutUs" class="cafe.action.SuccessAction"
+			method="execute">
+			<result name="success">/about_us.jsp</result>
+		</action>
 		<!-- メイン画面でファイルのアップロード機能 -->
 		<action name="FileStreamAction" class="cafe.action.uploadFileAction"
 			method="execute">

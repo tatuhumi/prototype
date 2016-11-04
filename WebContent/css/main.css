@@ -1,5 +1,50 @@
 @CHARSET "UTF-8";
 
-header{
-	height:125px;
+html, body {
+	margin: 0; /* 余白の削除 */
+	padding: 0; /* 余白の削除 */
+	height: 100%; /* 縦の高さを100% */
+	width: 100%; /* 横の幅を100% */
+}
+/* 全体を囲う大枠 */
+div#contents {
+	position: relative; /* フッター部の配置用に定義 */
+	min-height: 100%; /* 縦の表示領域を100% */
+}
+
+/* ヘッダーの背景 */
+div#header-bk {
+	padding: 10px 0 0; /* 上から10px分余白をあける */
+	height: 100px; /* 縦の高さ140px */
+	width: 100%; /* 横の幅を100% */
+}
+/* ヘッダーの表示領域 */
+div#header {
+	height: 80px; /* 縦の表示領域120px */
+	width: 100%; /* 横の幅970px */
+}
+
+/* ボディ */
+/* ボディの大枠 */
+div#body-bk {
+	width: 100%; /* 横の幅970px */
+	margin: 10px auto 0; /* 上から10px分余白を取る */
+	padding-bottom: 80px; /* フッターの高さの分余白を取る */
+}
+
+/* ボディ */
+div#body {
+}
+
+div#footer-bk {
+	width: 100%; /* 横の幅を100% */
+	height: 50px; /* 縦の幅を120px */
+	position: absolute; /* 絶対位置指定することを定義 */
+	bottom: 0px; /* 絶対位置指定(左0px,下0px) */
+	padding: 10px 0; /* 上下に余白を取る */
+}
+/* フッターの表示領域 */
+div#footer {
+	height: 30px; /* 縦幅の指定100px */
+	width: 100%; /* 横の幅970px */
 }

@@ -10,6 +10,9 @@ password varchar(255) not null comment 'パスワード',
 user_flg int default 0
 );
 
+insert into user(user_id,name,password,user_flg)values
+(1,"itou","123",1),(2,"tatuhumi","123",1);
+
 
 create table contact_us (
 contact_id int auto_increment key  comment 'ユーザーID',
@@ -34,16 +37,11 @@ file_comment varchar(255) not null comment 'コメント'
 );
 
 insert into upload_file(upload_file_id,file_name,file_day,file_comment)values
-(1,"image/345.jpg","2016-07-01 13:00:00","a"),(2,"image/7.jpg","2016-07-01 13:00:00","a"),(3,"image/a.jpg","2016-07-01 13:00:00","a"),(4,"image/abc.jpg","2016-07-01 13:00:00","a"),(5,"image/asd.jpg","2016-07-01 13:00:00","a");
+(1,"image/1.jpg","2016-07-01 13:00:00","a"),(2,"image/2.jpg","2016-07-01 13:00:00","a"),(3,"image/3.jpg","2016-07-01 13:00:00","a"),(4,"image/4.jpg","2016-07-01 13:00:00","a"),(5,"image/5.jpg","2016-07-01 13:00:00","a");
 
 create table article (
 article_name varchar(255) not null comment '名前',
 article_image varchar(255) not null comment '画像',
 article_text varchar(255) not null comment 'テキスト'
-);
-
-create table user(
-id int(11) auto_increment primary key,
-email varchar(255) not null unique
 );
 
