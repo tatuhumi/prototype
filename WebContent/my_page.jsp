@@ -4,8 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
- <link rel="stylesheet" href="css/cafe.css">
+<meta charset=UTF-8>
 <title>マイページ</title>
 </head>
 <body>

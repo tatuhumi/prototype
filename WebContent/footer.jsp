@@ -10,16 +10,17 @@
 </head>
 <body>
       <footer>
-          Copyright protptype 2016.
-
-        <s:form action="GoContactUsAction">
-        <input type="submit" value="CONTACT" class="right"/>
-        </s:form>
-
-        <s:form action="GoAdminTopAction">
-        <input type="submit" value="管理人" class ="right"/>
-        </s:form>
-
+     <table>
+     <tr>
+       <td><s:form action="GoContactUsAction">
+        <input type="submit" value="Contact_Us" class="right"/>
+        </s:form></td>
+       <td><s:form action="GoAdminTopAction">
+        <input type="submit" value="About_Us" class ="right"/>
+        </s:form></td>
+        </tr>
+        </table>
+     Copyright protptype 2016.
       </footer>
 </body>
 </html>

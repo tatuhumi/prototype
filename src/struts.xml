@@ -46,7 +46,7 @@
 		<!-- メイン画面でファイルのアップロード機能 -->
 		<action name="FileStreamAction" class="cafe.action.uploadFileAction"
 			method="execute">
-			<result name="success" >my_page.jsp</result>
+			<result name="success">my_page.jsp</result>
 		</action>
 		<!-- インデックス画面からメイン画面への画面遷移 -->
 		<action name="MainAction" class="cafe.action.SelectMainAction"
@@ -54,7 +54,7 @@
 			<result name="success">main.jsp</result>
 		</action>
 
-<action name="ContactUsUpdate" class="cafe.action.AdminUserContactUsEditAction"
+		<action name="ContactUsUpdate" class="cafe.action.AdminUserContactUsEditAction"
 			method="execute">
 			<result name="success" type="chain">GoAdminUserContactUs</result>
 		</action>
@@ -68,6 +68,22 @@
 			method="execute">
 			<result name="success" type="chain">MainAction</result>
 		</action>
+
+		<action name="GoLogoutAction" class="cafe.action.LogoutAction"
+			method="execute">
+			<result name="success" type="chain">MainAction</result>
+		</action>
+
+		<action name="SearchResultAction" class="cafe.action.SelectMainAction"
+			method="execute">
+			<result name="success">main.jsp</result>
+		</action>
+
+		<action name="GoMyPageAction" class="cafe.action.SuccessAction"
+			method="execute">
+			<result name="success">my_page.jsp</result>
+		</action>
+
 
 	</package>
 </struts>
