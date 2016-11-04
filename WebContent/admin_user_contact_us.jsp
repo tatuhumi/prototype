@@ -13,6 +13,7 @@
 <title>管理人問い合わせ画面</title>
 </head>
 <body>
+<footer id="header"><jsp:include page="header.jsp" /></footer>
 	<table border="2" align="center">
 		<tbody id="list_body">
 			<tr>
@@ -131,5 +132,6 @@
 		<input type="button" value="戻る" onclick="history.back()">
 	</form>
 
+<footer id="footer"><jsp:include page="footer.jsp" /></footer>
 </body>
 </html>

@@ -1,28 +1,36 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-    <%@ taglib prefix="s" uri="/struts-tags"%>
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset=UTF-8>
-<title>Insert title here</title>
+<title>管理人TOPページ</title>
+<link rel="stylesheet" href="css/admin_top.css">
 </head>
 <body>
+<footer id="header"><jsp:include page="header.jsp" /></footer>
+	<br>
+	<br>
+	<br>
+	<div class="center">
+		<s:form action="GoAdminUserInfo">
+			<input type="submit" value="GoAdminUserInfo" class="btn">
+		</s:form>
+		<br> <br>
+		<s:form action="GoAdminUserContactUs">
+			<input type="submit" value="GoAdminUserContactUs" class="btn">
+		</s:form>
+		<br> <br>
+		<s:form action="GoAdminArticle">
+			<input type="submit" value="GoAdminArticle" class="btn">
+		</s:form>
+		<br> <br>
+		<form>
+			<input type="button" value="戻る" onclick="history.back()" class="btn">
+		</form>
+	</div>
 
-<s:form action="GoAdminUserInfo">
-<input type="submit" value="GoAdminUserInfo">
-</s:form>
-
-<s:form action="GoAdminUserContactUs">
-<input type="submit" value="GoAdminUserContactUs">
-</s:form>
-
-<s:form action="GoAdminArticle">
-<input type="submit" value="GoAdminArticle">
-</s:form>
-
-<form>
-	<input type="button" value="戻る" onclick="history.back()">
-	</form>
+	<footer id="footer"><jsp:include page="footer.jsp" /></footer>
 </body>
 </html>

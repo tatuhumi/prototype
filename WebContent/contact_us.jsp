@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="css/contact_us.css">
 </head>
 <body>
+<footer id="header"><jsp:include page="header.jsp" /></footer>
 	<br>
 	<br>
 	<br>
@@ -72,5 +73,6 @@
 	<input type="button" value="戻る" onclick="history.back()">
 	</form>
 
+<footer id="footer"><jsp:include page="footer.jsp" /></footer>
 </body>
 </html>

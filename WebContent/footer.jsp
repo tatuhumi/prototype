@@ -4,19 +4,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" href="css/cafe.css">
+<meta charset=UTF-8>
+
 <title>footer</title>
 </head>
 <body>
       <footer>
-          Copyright cafe 2016.
+          Copyright protptype 2016.
+
         <s:form action="GoContactUsAction">
         <input type="submit" value="CONTACT" class="right"/>
         </s:form>
+
         <s:form action="GoAdminTopAction">
         <input type="submit" value="管理人" class ="right"/>
         </s:form>
+
       </footer>
 </body>
 </html>

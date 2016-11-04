@@ -8,6 +8,9 @@
 <title>会社概要</title>
 </head>
 <body>
+<footer id="header"><jsp:include page="header.jsp" /></footer>
 a
+<footer id="footer"><jsp:include page="footer.jsp" /></footer>
+
 </body>
 </html>

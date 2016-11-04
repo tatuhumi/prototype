@@ -4,49 +4,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="css/cafe.css">
-<link rel="stylesheet" href="css/modal.css" />
-
 <!-- jQuery読み込み -->
-<script src="js/jquery-3.0.0.min.js"></script>
-<!-- モーダルウィンドウのjQuery読み込み -->
-<script src="js/jquery.leanModal.min.js"></script>
-<!-- js読み込み -->
-<script src="js/Modal.js"></script>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/header.js"></script>
+<link rel="stylesheet" href="css/header.css">
+<meta charset=UTF-8>
 <title>header</title>
 <body>
-	<header class="contents">
-		<if test="#session.userId !=null">
-		<h4>
-			<s:property value="#session.name" />
-			でログインしています
-		</h4>
-		<ul class="ul">
-			<li><a href="my_page">マイページ</a> <a href="main">ログアウト</a></li>
-		</ul>
-		</if>
-		<s:form action="GoArticleAction">
-		<input type ="submit" value="記事を投稿する">
+	<h4>
+		<s:property value="#session.name" />
+		でログインしています
+	</h4>
+
+	<input type="submit" value="新規登録" class="header-btn modal-login-open">
+	<input type="submit" value="ログアウト" class="header-btn">
+
+	<div class="modal-main">
+		新規登録を行います。<br>
+		<s:form action="GoLoginAction">
+			<table border="1">
+				<tr>
+					<td>名前</td>
+					<td><input type="text" name="name"></td>
+				</tr>
+				<tr>
+					<td>パスワード</td>
+					<td><input type="text" name="password"></td>
+				</tr>
+			</table>
+			<input type="submit" value="登録">
 		</s:form>
-		<else><a rel="leanModal" href="#div787"><input value ="ログイン" class = "btn"/> <input value ="新規登録" class = "btn"/></a>
-		<div id="div787">
+		<br>
+		<div class="close-modal">閉じる</div>
+	</div>
 
-			<p>
-				ログインID
-				<s:textfield name="loginId" value="" placeholder="taro"
-					required="required" />
-			</p>
-			<p>
-				パスワード
-				<s:password name="password" value="" placeholder="1234"
-					required="required" />
-			</p>
-			<s:submit type="button" value="ログイン" class="btnmodal" />
 
-		</div>
-
-		</else>
-	</header>
 </body>
 </html>

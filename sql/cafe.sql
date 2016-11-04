@@ -3,6 +3,14 @@ CREATE DATABASE cafe;
 
 use cafe;
 
+create table user (
+user_id int auto_increment key  comment 'ユーザーID',
+name varchar(255) not null comment '名前',
+password varchar(255) not null comment 'パスワード',
+user_flg int default 0
+);
+
+
 create table contact_us (
 contact_id int auto_increment key  comment 'ユーザーID',
 contact_name varchar(255) not null comment '名前',

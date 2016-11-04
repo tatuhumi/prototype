@@ -14,7 +14,7 @@
 <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-	<s:include value="bootstrap/index.html"></s:include>
+<footer id="header"><jsp:include page="header.jsp" /></footer>
 
 
 
@@ -30,7 +30,7 @@
 		</s:iterator>
 	</table>
 
-
+<footer id="footer"><jsp:include page="footer.jsp" /></footer>
 
 </body>
 </html>

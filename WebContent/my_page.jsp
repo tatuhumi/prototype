@@ -9,6 +9,7 @@
 <title>マイページ</title>
 </head>
 <body>
+<footer id="header"><jsp:include page="header.jsp" /></footer>
 <h4>
 <s:property value = "#session.name"/>
 さんの投稿一覧</h4>
@@ -21,6 +22,8 @@
 			type="text" name="comment"><br> <input type="submit"
 			value="提出">
 	</s:form>
+
+<footer id="footer"><jsp:include page="footer.jsp" /></footer>
 
 </body>
 </html>

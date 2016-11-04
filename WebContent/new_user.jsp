@@ -9,6 +9,7 @@
 <title>SignUp</title>
 </head>
 <body>
+	<footer id="header"><jsp:include page="header.jsp" /></footer>
 	<table>
 		<tr>
 			<td>Name</td>
@@ -17,20 +18,23 @@
 		</tr>
 		<tr>
 			<td>email</td>
-			<td><input type="text" name="email" size=40 placeholder="半角英数" >
+			<td><input type="text" name="email" size=40 placeholder="半角英数">
 			</td>
 		</tr>
 		<tr>
 			<td>パスワード</td>
-			<td><input type="password" name="password" size=10 placeholder="半角英数">
-			</td>
+			<td><input type="password" name="password" size=10
+				placeholder="半角英数"></td>
 		</tr>
 	</table>
 
 	<br>
 	<input type="submit" value="Sign Up" class="btn">
-<s:form action="goMainAcion">
-	<input type ="submit" value="Main" class ="btn">
-	</s:form> 
+	<s:form action="goMainAcion">
+		<input type="submit" value="Main" class="btn">
+	</s:form>
+
+	<footer id="footer"><jsp:include page="footer.jsp" /></footer>
+
 </body>
 </html>
