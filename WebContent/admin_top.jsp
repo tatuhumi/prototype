@@ -7,12 +7,20 @@
 <meta charset=UTF-8>
 <title>管理人TOPページ</title>
 <link rel="stylesheet" href="css/admin_top.css">
+<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+<div id="contents">
+		<div id="header-bk">
+			<div id="header">
+				<header><jsp:include page="header.jsp" /></header>
+			</div>
+		</div>
+		<div id="body-bk">
+			<div id="body">
 
-	<br>
-	<br>
-	<br>
+
+
 	<div class="center">
 		<s:form action="GoAdminUserInfo">
 			<input type="submit" value="GoAdminUserInfo" class="btn">
@@ -31,6 +39,16 @@
 		</form>
 	</div>
 
-	<footer id="footer"><jsp:include page="footer.jsp" /></footer>
+
+
+			</div>
+		</div>
+		<div id="footer-bk">
+			<div id="footer">
+				<footer><jsp:include page="footer.jsp" /></footer>
+			</div>
+		</div>
+	</div>
+
 </body>
 </html>

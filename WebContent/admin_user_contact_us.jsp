@@ -5,6 +5,7 @@
 <html>
 <head>
 <link rel="stylesheet" href="css/admin_user_contact_us.css">
+<link rel="stylesheet" href="css/main.css">
 <!-- jQuery読み込み -->
 <script src="js/jquery-3.1.0.min.js"></script>
 <!-- js読み込み -->
@@ -13,8 +14,16 @@
 <title>管理人問い合わせ画面</title>
 </head>
 <body>
+<div id="contents">
+		<div id="header-bk">
+			<div id="header">
+				<header><jsp:include page="header.jsp" /></header>
+			</div>
+		</div>
+		<div id="body-bk">
+			<div id="body">
 
-	<table border="2" align="center">
+<table border="2" align="center">
 		<tbody id="list_body">
 			<tr>
 				<th>件名</th>
@@ -132,6 +141,16 @@
 		<input type="button" value="戻る" onclick="history.back()">
 	</form>
 
-<footer id="footer"><jsp:include page="footer.jsp" /></footer>
+
+
+			</div>
+		</div>
+		<div id="footer-bk">
+			<div id="footer">
+				<footer><jsp:include page="footer.jsp" /></footer>
+			</div>
+		</div>
+	</div>
+
 </body>
 </html>

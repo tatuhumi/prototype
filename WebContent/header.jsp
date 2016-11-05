@@ -49,6 +49,7 @@
 			<input type="submit" value="登録">
 		</s:form>
 
+<s:form action="LoginConfirmAction">
 			<table border="1">
 				<tr>
 					<td>名前</td>
@@ -60,7 +61,7 @@
 				</tr>
 			</table>
 			<input type="submit" value="ログイン">
-
+</s:form>
 		<br>
 		<div class="close-modal">閉じる</div>
 	</div>

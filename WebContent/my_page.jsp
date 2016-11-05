@@ -6,8 +6,18 @@
 <head>
 <meta charset=UTF-8>
 <title>マイページ</title>
+<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+<div id="contents">
+		<div id="header-bk">
+			<div id="header">
+				<header><jsp:include page="header.jsp" /></header>
+			</div>
+		</div>
+		<div id="body-bk">
+			<div id="body">
+
 
 	<h4>
 		<s:property value="#session.name" />
@@ -33,7 +43,17 @@
 	<br> ３ネイティブ・フックまたはポーリングを使用してリフレッシュ」を選択。 ４「OK」ボタンをクリック。
 	<br>
 
-	<footer id="footer"><jsp:include page="footer.jsp" /></footer>
+
+
+			</div>
+		</div>
+		<div id="footer-bk">
+			<div id="footer">
+				<footer><jsp:include page="footer.jsp" /></footer>
+			</div>
+		</div>
+	</div>
+
 
 </body>
 </html>

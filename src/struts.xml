@@ -89,6 +89,11 @@
 			<result name="success">my_page.jsp</result>
 		</action>
 
+		<action name="LoginConfirmAction" class="cafe.action.LoginConfirmAction"
+			method="execute">
+			<result name="success" type="chain">MainAction</result>
+		</action>
+
 
 	</package>
 </struts>

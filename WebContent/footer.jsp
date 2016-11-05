@@ -19,7 +19,7 @@
 			<td><s:form action="GoAboutUs">
 					<input type="submit" value="About_Us">
 				</s:form></td>
-			<td><s:if test="#session.userflg==1">
+			<td><s:if test="#session.userFlg==1">
 					<s:form action="GoAdminTopAction">
 						<input type="submit" value="AdminUser">
 					</s:form>
