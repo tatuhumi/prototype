@@ -34,7 +34,7 @@
 		<input type="submit" value="提出">
 	</s:form>
 	<br>
-	<br>
+	<br>ファイル名の拡張子は変更しないで下さい！
 	<br>
 	<br> これでメイン画面に画像が反映されない方は以下を試して下さい
 	<br> Eclipseで

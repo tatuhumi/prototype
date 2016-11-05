@@ -1,12 +1,10 @@
 package cafe.action;
-import java.awt.Graphics;
-import java.awt.image.BufferedImage;
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
-
-import javax.imageio.ImageIO;
-
-import org.apache.commons.io.FileUtils;
 
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -30,32 +28,12 @@ public class uploadFileAction extends ActionSupport{
 			uploadFileDAO dao=new uploadFileDAO();
 			int count=dao.insert(myFileFileName,comment);
 
-			File destFile  = new File(destPath, myFileFileName);
-			FileUtils.copyFile(myFile, destFile);
-
 			System.out.println("Src File name: " + myFile);
 			System.out.println("Dst File name: " + myFileFileName);
-			System.out.println(destPath+File.separator+myFileFileName);
 
-			String Path=destPath+File.separator+myFileFileName;
-
-			BufferedImage b=ImageIO.read(new File(Path));
-//			下の２００，２００の部分で出力先の大きさを変更できる
-			int ww=150;
-			int hh=150;
-
-			BufferedImage b2=new BufferedImage(ww,hh,BufferedImage.TYPE_INT_RGB);
-
-			Graphics g2=b2.getGraphics();
-			System.out.println(b.getWidth());
-			System.out.println(b.getHeight());
-//上の定義により200,200ファイルなので、元のファイルの大きさにしたいときは２００，２００とする
-//１００，１００にすると上下、縦横を半分、半分したファイルとなる、他は真っ黒
-			g2.drawImage(b,0,0,150,150,0,0,b.getWidth(),b.getHeight(),null);
-			g2.dispose();
-
-			ImageIO.write(b2, "jpg", new File(Path));
-
+			File from=myFile;
+			File to=new File(destPath+File.separator+myFileFileName);
+			uploadFileAction.Filecopy(from,to);
 
 			if(count>0){
 				result=SUCCESS;
@@ -65,6 +43,60 @@ public class uploadFileAction extends ActionSupport{
 		}
 		return result;
 	}
+
+	public static void Filecopy(File from, File to) throws IOException {
+		BufferedOutputStream out = null;
+		BufferedInputStream in = null;
+		try {
+			in = new BufferedInputStream(new FileInputStream(from));
+			out = new BufferedOutputStream(new FileOutputStream(to));
+			byte[] buff = new byte[4096];
+			int len = 0;
+			while ((len = in.read(buff, 0, buff.length)) >= 0) {
+				out.write(buff, 0, len);
+			}
+		} finally {
+			if (in != null) {
+				try {
+					in.close();
+				} catch (IOException e) {
+				}
+			}
+			if (out != null) {
+				try {
+					out.close();
+				} catch (IOException e) {
+				}
+			}
+		}
+	}
+
+
+	//			File destFile  = new File(destPath, myFileFileName);
+	//			FileUtils.copyFile(myFile, destFile);
+	//
+
+	//			System.out.println(destPath+File.separator+myFileFileName);
+	//
+	//			String Path=destPath+File.separator+myFileFileName;
+	//
+	//			BufferedImage b=ImageIO.read(new File(Path));
+	////			下の15０，15０の部分で出力先の大きさを変更できる
+	//			int ww=150;
+	//			int hh=150;
+	//
+	//			BufferedImage b2=new BufferedImage(ww,hh,BufferedImage.TYPE_INT_RGB);
+	//
+	//			Graphics g2=b2.getGraphics();
+	//			System.out.println(b.getWidth());
+	//			System.out.println(b.getHeight());
+	////上の定義により150,150ファイルなので、元のファイルの大きさにしたいときは15０，15０とする
+	////75，75にすると上下、縦横を半分、半分したファイルとなる、他は真っ黒
+	//			g2.drawImage(b,0,0,150,150,0,0,b.getWidth(),b.getHeight(),null);
+	//			g2.dispose();
+	//
+	//			ImageIO.write(b2, "jpg", new File(Path));
+
 
 
 	public String getComment() {
