@@ -24,9 +24,14 @@
 							<button type="submit" name="siteTitle">
 								<img src="<s:property value="fileName"/>" width="200"
 									height="200">
-							</button> <br> <s:property value="fileDay" /><br> <s:property
-								value="fileComment" />
-						</td>
+							</button> <br> <s:property value="fileComment" />
+						<td></td>
+						<td></td>
+						<td></td>
+						<s:if test="%{fileNumber%6==0}">
+							<tr>
+							</tr>
+						</s:if>
 					</s:iterator>
 				</table>
 			</div>

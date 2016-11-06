@@ -6,6 +6,7 @@ html, body {
 	height: 100%; /* 縦の高さを100% */
 	width: 100%; /* 横の幅を100% */
 }
+
 /* 全体を囲う大枠 */
 div#contents {
 	position: relative; /* フッター部の配置用に定義 */
@@ -34,6 +35,7 @@ div#body-bk {
 
 /* ボディ */
 div#body {
+
 }
 
 div#footer-bk {

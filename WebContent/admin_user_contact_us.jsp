@@ -5,7 +5,6 @@
 <html>
 <head>
 <link rel="stylesheet" href="css/admin_user_contact_us.css">
-<link rel="stylesheet" href="css/main.css">
 <!-- jQuery読み込み -->
 <script src="js/jquery-3.1.0.min.js"></script>
 <!-- js読み込み -->
@@ -43,7 +42,7 @@
 					<td class="contentDate"><s:property value="contactDate" /></td>
 					<s:if test="%{primarity == 0}">
 						<td><input type="button" value="削除" class="modal-open"></td>
-						<td><input type="button" value="編集" class="modal-open-edit"></td>
+						<td><input type="button" value="返信" class="modal-open-edit"></td>
 						<td><s:form action="ContactPrimarityAction">
 								<input type="hidden" name="contactId"
 									value="<s:property value="contactId" />">
