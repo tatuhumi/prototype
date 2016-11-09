@@ -22,13 +22,13 @@
 					<s:iterator value="selectList">
 						<td>
 							<button type="submit" name="siteTitle">
-								<img src="<s:property value="fileName"/>" width="200"
-									height="200">
+								<img src="<s:property value="fileName"/>" width="300"
+									height="300">
 							</button> <br> <s:property value="fileComment" />
 						<td></td>
 						<td></td>
 						<td></td>
-						<s:if test="%{fileNumber%6==0}">
+						<s:if test="%{fileNumber%5==0}">
 							<tr>
 							</tr>
 						</s:if>
