@@ -1,10 +1,17 @@
 package cafe.action;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.image.BufferedImage;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+
+import javax.imageio.ImageIO;
 
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -35,6 +42,51 @@ public class uploadFileAction extends ActionSupport{
 			File to=new File(destPath+File.separator+myFileFileName);
 			uploadFileAction.Filecopy(from,to);
 
+			//			BufferedImage image = null;
+
+			//	ファイル読み込み
+
+			BufferedImage b=ImageIO.read(to);
+			//			下の15０，15０の部分で出力先の大きさを変更できる
+			int ww=300;
+			int hh=300;
+			BufferedImage b2=new BufferedImage(ww,hh,BufferedImage.TYPE_INT_RGB);
+			Graphics g=b2.getGraphics();
+			//上の定義により150,150ファイルなので、元のファイルの大きさにしたいときは15０，15０とする
+			//75，75にすると上下、縦横を半分、半分したファイルとなる、他は真っ黒
+			//			g.drawImage(b,0,0,200,200,0,0,b.getWidth(),b.getHeight(),null);
+			Graphics2D g2 = (Graphics2D)g;
+			g2.drawImage(b,0,0,300,300,0,0,b.getWidth(),b.getHeight(),null);
+			//			g2.drawString("Hello Java2D", 30, 40);
+
+			Font font2 = new Font("ＭＳ 明朝", Font.BOLD, 20);
+			g2.setFont(font2);
+			g2.setColor(Color.white);
+			g2.drawString(comment,0,180);
+			if(comment.length()>15){
+				g2.drawString(comment.substring(15),0,200);
+			}
+			System.out.println(comment.substring(15));
+			ImageIO.write(b2, "jpg", to);
+
+
+			//			image = ImageIO.read(to);
+			//
+			//			Graphics graphics = image.createGraphics();
+			//			Graphics2D g2 = (Graphics2D)graphics;
+			//
+			//			g2.drawString("Hello Java2D", 30, 40);
+			//
+			//			Font font2 = new Font("ＭＳ 明朝", Font.BOLD, 32);
+			//			g2.setFont(font2);
+			//			g2.setColor(Color.black);
+			//			g2.drawString(comment, 0, image.getHeight()*2/3);
+			//
+			//
+			//			//	ファイル保存
+			//			ImageIO.write(image, "gif", to);
+
+
 			if(count>0){
 				result=SUCCESS;
 			}
@@ -43,6 +95,8 @@ public class uploadFileAction extends ActionSupport{
 		}
 		return result;
 	}
+
+
 
 	public static void Filecopy(File from, File to) throws IOException {
 		BufferedOutputStream out = null;
@@ -88,8 +142,6 @@ public class uploadFileAction extends ActionSupport{
 	//			BufferedImage b2=new BufferedImage(ww,hh,BufferedImage.TYPE_INT_RGB);
 	//
 	//			Graphics g2=b2.getGraphics();
-	//			System.out.println(b.getWidth());
-	//			System.out.println(b.getHeight());
 	////上の定義により150,150ファイルなので、元のファイルの大きさにしたいときは15０，15０とする
 	////75，75にすると上下、縦横を半分、半分したファイルとなる、他は真っ黒
 	//			g2.drawImage(b,0,0,150,150,0,0,b.getWidth(),b.getHeight(),null);
@@ -110,7 +162,6 @@ public class uploadFileAction extends ActionSupport{
 	public File getMyFile() {
 		return myFile;
 	}
-
 
 
 	public String getMyFileName() {
