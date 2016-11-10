@@ -5,6 +5,7 @@
 <html>
 <head>
 <link rel="stylesheet" href="css/admin_user_contact_us.css">
+<link rel="stylesheet" href="css/main.css">
 <!-- jQuery読み込み -->
 <script src="js/jquery-3.1.0.min.js"></script>
 <!-- js読み込み -->
@@ -55,7 +56,7 @@
 								<input type="hidden" name="contactId"
 									value="<s:property value="contactId" />">
 								<input type="hidden" name="primarity" value="0">
-								<input type="submit" value="保護解除">
+								<input type="submit" value="保護">
 							</s:form></td>
 					</s:else>
 
@@ -97,7 +98,7 @@
 	</div>
 
 	<div class="modal-main-edit">
-		以下の内容を編集してもよろしいですか？
+		以下の内容で返信してもよろしいですか？
 
 		<table border="1">
 			<tr>
@@ -111,6 +112,10 @@
 			<tr>
 				<td>お問い合わせ内容</td>
 				<td><span class="modal-contentContent"></span></td>
+			</tr>
+			<tr>
+				<td>返信内容</td>
+				<td><textarea name="replay" rows="5" cols="40"></textarea></td>
 			</tr>
 		</table>
 

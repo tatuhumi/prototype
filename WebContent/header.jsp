@@ -12,7 +12,8 @@
 <title>header</title>
 <body>
 	<s:if test="#session.name==null">
-		<input type="submit" value="新規登録orログイン" class="header-btn modal-login-open">
+		<input type="submit" value="Sign up or Login"
+			class="header-btn modal-login-open">
 	</s:if>
 	<s:else>
 		<s:property value="#session.name" />
@@ -20,15 +21,16 @@
 			<table>
 			<tr>
 				<td><s:form action="GoMyPageAction">
-						<input type="submit" value="マイページ" class="header-btn">
+						<input type="submit" value="マイページ">
 					</s:form></td>
 				<td><s:form action="GoLogoutAction">
-						<input type="submit" value="ログアウト" class="header-btn">
+						<input type="submit" value="ログアウト">
 					</s:form></td>
 			</tr>
 		</table>
 		<s:form action="SearchResultAction">
-			<input type="text" name="summary"><br>
+			<input type="text" name="summary">
+			<br>
 			<input type="submit" value="キーワード検索">
 		</s:form>
 	</s:else>
@@ -49,7 +51,7 @@
 			<input type="submit" value="登録">
 		</s:form>
 
-<s:form action="LoginConfirmAction">
+		<s:form action="LoginConfirmAction">
 			<table border="1">
 				<tr>
 					<td>名前</td>
@@ -61,7 +63,7 @@
 				</tr>
 			</table>
 			<input type="submit" value="ログイン">
-</s:form>
+		</s:form>
 		<br>
 		<div class="close-modal">閉じる</div>
 	</div>

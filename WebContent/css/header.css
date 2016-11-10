@@ -1,13 +1,6 @@
 @CHARSET "UTF-8";
 
-.header-btn {
-	border: none;
-	background-color: transparent;
-}
 
-.modal-login-open {
-
-}
 /* モーダル コンテンツエリア */
 .modal-main {
 	display: none;

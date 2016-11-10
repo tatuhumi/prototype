@@ -59,15 +59,14 @@ public class uploadFileAction extends ActionSupport{
 			g2.drawImage(b,0,0,300,300,0,0,b.getWidth(),b.getHeight(),null);
 			//			g2.drawString("Hello Java2D", 30, 40);
 
-			Font font2 = new Font("ＭＳ 明朝", Font.BOLD, 20);
+			Font font2 = new Font("メイリオ", Font.BOLD, 20);
 			g2.setFont(font2);
-			g2.setColor(Color.white);
+			g2.setColor(Color.black);
 			g2.drawString(comment,0,180);
 			if(comment.length()>15){
 				g2.drawString(comment.substring(15),0,200);
 			}
-			System.out.println(comment.substring(15));
-			ImageIO.write(b2, "jpg", to);
+			ImageIO.write(b2, "gif", to);
 
 
 			//			image = ImageIO.read(to);
