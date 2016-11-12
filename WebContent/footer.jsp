@@ -13,15 +13,15 @@
 		<tr>
 			<td><s:if test="#session.name!=null">
 					<s:form action="GoContactUsAction">
-						<input type="submit" value="Contact_Us">
+						<input type="submit" value="Contact_Us" class="btn">
 					</s:form>
 				</s:if></td>
 			<td><s:form action="GoAboutUs">
-					<input type="submit" value="About_Us">
+					<input type="submit" value="About_Us" class="btn">
 				</s:form></td>
 			<td><s:if test="#session.userFlg==1">
 					<s:form action="GoAdminTopAction">
-						<input type="submit" value="AdminUser">
+						<input type="submit" value="AdminUser" class="btn">
 					</s:form>
 				</s:if></td>
 		</tr>

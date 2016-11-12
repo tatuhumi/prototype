@@ -23,7 +23,7 @@
 						<td>
 							<button type="submit" name="siteTitle">
 								<img src="<s:property value="fileName"/>" width="300"
-									height="300">
+									height="300">aaaaaaaaaaa
 							</button> <br> <s:property value="fileComment" />
 						<td></td>
 						<td></td>

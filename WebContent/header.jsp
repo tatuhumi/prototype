@@ -13,7 +13,7 @@
 <body>
 	<s:if test="#session.name==null">
 		<input type="submit" value="Sign up or Login"
-			class="header-btn modal-login-open">
+			class="header-btn modal-login-open btn">
 	</s:if>
 	<s:else>
 		<s:property value="#session.name" />
@@ -21,18 +21,18 @@
 			<table>
 			<tr>
 				<td><s:form action="GoMyPageAction">
-						<input type="submit" value="マイページ">
+						<input type="submit" value="My page" class="btn">
 					</s:form></td>
 				<td><s:form action="GoLogoutAction">
-						<input type="submit" value="ログアウト">
+						<input type="submit" value="Logout" class="btn">
+					</s:form></td>
+				<td><s:form action="SearchResultAction">
+						<input type="text" name="summary">
+						<br>
+						<input type="submit" value="キーワード検索" class="btn">
 					</s:form></td>
 			</tr>
 		</table>
-		<s:form action="SearchResultAction">
-			<input type="text" name="summary">
-			<br>
-			<input type="submit" value="キーワード検索">
-		</s:form>
 	</s:else>
 
 	<div class="modal-main">
