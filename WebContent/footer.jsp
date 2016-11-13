@@ -11,6 +11,9 @@
 <body>
 	<table>
 		<tr>
+			<td><s:form action="GoBackAction">
+					<input type="submit" value="戻る">
+				</s:form></td>
 			<td><s:if test="#session.name!=null">
 					<s:form action="GoContactUsAction">
 						<input type="submit" value="Contact_Us" class="btn">

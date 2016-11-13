@@ -18,7 +18,7 @@
 		<div id="body-bk">
 			<div id="body">
 
-				<table border="2" align="center">
+				<table align="center" class="sample_01">
 					<tbody id="list_body">
 						<tr>
 							<th>件名</th>
@@ -26,6 +26,9 @@
 							<th>メールアドレス</th>
 							<th>お問い合わせ内容</th>
 							<th>お問い合わせ日時</th>
+							<th class="input-size">削除</th>
+							<th class="input-size">返信</th>
+							<th class="input-size">保護</th>
 						</tr>
 						<s:iterator value="List">
 							<input type="hidden" value="<s:property value="contactId" />"
@@ -53,7 +56,7 @@
 											<input type="hidden" name="contactId"
 												value="<s:property value="contactId" />">
 											<input type="hidden" name="primarity" value="0">
-											<input type="submit" value="保護">
+											<input type="submit" value="解除">
 										</s:form></td>
 								</s:else>
 

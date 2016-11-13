@@ -1,5 +1,8 @@
 @CHARSET "UTF-8";
 
+
+
+
 /* モーダル コンテンツエリア */
 .modal-main {
 	display: none;
@@ -24,30 +27,23 @@
 	z-index: 1;
 }
 
-input.btn {
-	margin: 10px;
-	font-size: 1em;
-	font-weight: bold;
-	border-radius: 50px;
-	padding: 10px 20px;
-	border: none;
-	width: 200px;
+.sample_01 {
+	text-align: "center";
+	border-collapse: collapse;
 }
 
-input.btn {
-	background: #333;
-	color: #fff;
-	border: solid 1px;
-}
-
-input.btn:hover {
-	background: #fff;
+.sample_01 th {
+	padding: 6px;
+	text-align: left;
+	vertical-align: top;
 	color: #333;
-	border: solid 1px #333;
-	transition: all 0.5s;
+	background-color: #eee;
+	border: 1px solid #b9b9b9;
 }
 
-input.btn:active {
-	background: #c00;
-	color: #fff;
+.sample_01 td {
+	padding: 6px;
+	background-color: #fff;
+	border: 1px solid #b9b9b9;
+	padding: 6px;
 }

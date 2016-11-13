@@ -1,6 +1,31 @@
 @CHARSET "UTF-8";
 
-#contents{
+.sample_01 {
+	text-align: "center";
+	border-collapse: collapse;
+}
+
+.sample_01 th {
+	padding: 6px;
+	text-align: left;
+	vertical-align: top;
+	color: #333;
+	background-color: #eee;
+	border: 1px solid #b9b9b9;
+}
+
+.sample_01 td {
+	padding: 6px;
+	background-color: #fff;
+	border: 1px solid #b9b9b9;
+	padding: 6px;
+}
+
+.input-size{
+	width:50px;
+}
+
+#contents {
 	z-index: 0;
 	font-size: 16px;
 }
@@ -102,4 +127,3 @@
 	z-index: 0;
 	font-size: 16px;
 }
-

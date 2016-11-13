@@ -6,42 +6,37 @@
 <head>
 <meta charset=UTF-8>
 <title>メインページ</title>
-<script src="js/jquery-3.0.0.min.js"></script>
-<link rel="stylesheet" href="css/main.css">
+<script src="js/main.js"></script>
+<script src="js/slick.js"></script>
+<script src="js/jquery-3.1.0.min.js"></script>
+<link rel="stylesheet" href="css/slick.css">
+<link rel="stylesheet" href="css/slick-theme.css">
 </head>
 <body>
-	<div id="contents">
-		<div id="header-bk">
-			<div id="header">
-				<header><jsp:include page="header.jsp" /></header>
-			</div>
-		</div>
-		<div id="body-bk">
-			<div id="body">
-				<table>
-					<s:iterator value="selectList">
-						<td>
-							<button type="submit" name="siteTitle">
-								<img src="<s:property value="fileName"/>" width="300"
-									height="300">aaaaaaaaaaa
-							</button> <br> <s:property value="fileComment" />
-						<td></td>
-						<td></td>
-						<td></td>
-						<s:if test="%{fileNumber%5==0}">
-							<tr>
-							</tr>
-						</s:if>
-					</s:iterator>
-				</table>
-			</div>
-		</div>
-		<div id="footer-bk">
-			<div id="footer">
-				<footer><jsp:include page="footer.jsp" /></footer>
-			</div>
-		</div>
-	</div>
+
+	<table class="slider-nav">
+		<s:iterator value="selectList">
+			<tr>
+				<s:if test="%{fileNumber%2==0}">
+					<td><button type="submit" name="siteTitle">
+							<img src="<s:property value="fileName"/>" width="300"
+								height="300">
+						</button></td>
+				</s:if>
+			</tr>
+			<tr>
+				<s:else>
+					<td><button type="submit" name="siteTitle">
+							<img src="<s:property value="fileName"/>" width="300"
+								height="300">
+						</button></td>
+				</s:else>
+			</tr>
+		</s:iterator>
+	</table>
+
+
+
 
 </body>
 </html>

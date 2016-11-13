@@ -21,24 +21,19 @@
 			<table>
 			<tr>
 				<td><s:form action="GoMyPageAction">
-						<input type="submit" value="My page" class="btn">
+						<input type="submit" value="My page">
 					</s:form></td>
 				<td><s:form action="GoLogoutAction">
-						<input type="submit" value="Logout" class="btn">
-					</s:form></td>
-				<td><s:form action="SearchResultAction">
-						<input type="text" name="summary">
-						<br>
-						<input type="submit" value="キーワード検索" class="btn">
+						<input type="submit" value="Logout">
 					</s:form></td>
 			</tr>
 		</table>
 	</s:else>
 
 	<div class="modal-main">
-		新規登録を行います。<br>
+		<br> 新規登録を行います。<br>
 		<s:form action="GoLoginAction">
-			<table border="1">
+			<table border="1" class="sample_01">
 				<tr>
 					<td>名前</td>
 					<td><input type="text" name="name"></td>
@@ -50,9 +45,9 @@
 			</table>
 			<input type="submit" value="登録">
 		</s:form>
-
+		<br> ログインを行います。<br>
 		<s:form action="LoginConfirmAction">
-			<table border="1">
+			<table border="1" class="sample_01">
 				<tr>
 					<td>名前</td>
 					<td><input type="text" name="name"></td>
@@ -64,7 +59,6 @@
 			</table>
 			<input type="submit" value="ログイン">
 		</s:form>
-		<br>
 		<div class="close-modal">閉じる</div>
 	</div>
 
