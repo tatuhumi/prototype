@@ -6,36 +6,29 @@
 <head>
 <meta charset=UTF-8>
 <title>メインページ</title>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/slick.min.js"></script>
 <script src="js/main.js"></script>
-<script src="js/slick.js"></script>
-<script src="js/jquery-3.1.0.min.js"></script>
-<link rel="stylesheet" href="css/slick.css">
 <link rel="stylesheet" href="css/slick-theme.css">
+<link rel="stylesheet" href="css/slick.css">
+<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
-	<table class="slider-nav">
-		<s:iterator value="selectList">
-			<tr>
-				<s:if test="%{fileNumber%2==0}">
-					<td><button type="submit" name="siteTitle">
-							<img src="<s:property value="fileName"/>" width="300"
-								height="300">
-						</button></td>
-				</s:if>
-			</tr>
-			<tr>
-				<s:else>
-					<td><button type="submit" name="siteTitle">
-							<img src="<s:property value="fileName"/>" width="300"
-								height="300">
-						</button></td>
-				</s:else>
-			</tr>
+	<h2>複数表示（レスポンシブ）</h2>
+	<ul class="slider multiple-item">
+		<s:iterator value="selectList3">
+			<li><img src="<s:property value="fileName"/>"  alt="" /></li>
 		</s:iterator>
-	</table>
+	</ul>
 
-
+	<h2>複数表示（レスポンシブ）</h2>
+	<ul class="slider multiple-item2">
+		<s:iterator value="selectList2">
+			<li><img src="<s:property value="fileName"/>" alt=""></li>
+		</s:iterator>
+	</ul>
 
 
 </body>

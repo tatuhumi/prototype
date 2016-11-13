@@ -47,11 +47,11 @@ public class SelectMainAction extends ActionSupport {
 		SelectMainDAO dao = new SelectMainDAO();
 		selectList = dao.select(summary);
 		for(int i=0;i<selectList.size();i++){
-//			if(selectList.get(i).getFileNumber()%2==0){
-//				selectList2.add(selectList.get(i));
-//			}else{
-//				selectList3.add(selectList.get(i));
-//			}
+		if(selectList.get(i).getFileNumber()%2==0){
+			selectList2.add(selectList.get(i));
+		}else{
+			selectList3.add(selectList.get(i));
+		}
 		}
 
 		if (selectList.size() != 0) {
